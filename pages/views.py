@@ -3,8 +3,6 @@ from listings.models import Listing
 from listings.choices import bedroom_choices, price_choices, state_choices
 from realtors.models import Realtor
 
-
-
 # Create your views here.
 
 def index(request):
@@ -15,7 +13,7 @@ def index(request):
 	 	'price_choices':price_choices,
 	 	'state_choices':state_choices
 	}
-	return render(request, 'home.html', context)
+	return render(request, 'pages/home.html', context)
 
 def about(request):
 
@@ -26,4 +24,4 @@ def about(request):
 		'realtors':realtors,
 		 'mvp': mvp,
 	}
-	return render(request, 'about.html', context)
+	return render(request, 'pages/about.html', context)
